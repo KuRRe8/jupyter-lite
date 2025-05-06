@@ -1,0 +1,9 @@
+实测只适合教学或者练习基本语法使用，ChatGPT的canvas就用了一个自己构建的pyodide框架，所以能直接网页运行python程序
+
+1. 首先input等交互必须await，连带所有外层函数都要await，time.sleep也变成了asyncio.sleep。
+2. 经常莫名其妙卡住，响应信息不丰富。
+3. 没有多线程多进程，没有GPU调用，c后端的库只有最主流的几个支持，体验感一点也不完整。
+4. 网络没啥支持
+
+建议是：
+优先IDE开发，比如VSCode（本地远程或者web）或者PyCharm，其次云端开发（容器），一般都提供jupyterlab的完整体验，随便练手的时候可以用jupyterlite
